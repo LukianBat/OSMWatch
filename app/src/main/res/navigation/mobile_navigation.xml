@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.memebattle.osmwatch.feature.menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_cashResultFragment"
+            app:destination="@id/cashResultFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_osmFragment"
+            app:destination="@id/osmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heartRateFragment"
+        android:name="com.memebattle.osmwatch.feature.heartrate.presentation.HeartRateFragment"
+        android:label="fragment_heart_rate"
+        tools:layout="@layout/fragment_heart_rate" >
+        <action
+            android:id="@+id/action_heartRateFragment_to_osmFragment"
+            app:destination="@id/osmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.memebattle.osmwatch.feature.result.presentation.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/osmFragment"
+        android:name="com.memebattle.osmwatch.feature.osm.presentation.OsmFragment"
+        android:label="fragment_osm"
+        tools:layout="@layout/fragment_osm" >
+        <action
+            android:id="@+id/action_osmFragment_to_heartRateFragment"
+            app:destination="@id/heartRateFragment" />
+        <action
+            android:id="@+id/action_osmFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cashResultFragment"
+        android:name="com.memebattle.osmwatch.feature.cash_result.CashResultFragment"
+        android:label="fragment_cash_result"
+        tools:layout="@layout/fragment_cash_result" />
+</navigation>
