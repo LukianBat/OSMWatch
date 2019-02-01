@@ -1,4 +1,4 @@
-# OSMWatch
+# OSM Watch
 Rebirth OSM for android smartwatch with simple and progressive disign.
 # Clean Architecture
 I try to use clean Architecture
