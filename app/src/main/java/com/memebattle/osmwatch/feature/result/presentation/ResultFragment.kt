@@ -1,5 +1,6 @@
 package com.memebattle.osmwatch.feature.result.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,13 +9,14 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.memebattle.osmwatch.MainActivity
 import com.memebattle.osmwatch.R
 import kotlinx.android.synthetic.main.fragment_result.*
 
 
 class ResultFragment : Fragment() {
 
-    lateinit var viewModel : ResultFragmentViewModel
+    lateinit var viewModel: ResultFragmentViewModel
     private lateinit var navController: NavController
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +34,9 @@ class ResultFragment : Fragment() {
         zone_display.text = zone.toString()
         point_display.text = point.toString()
         result_parent_layout.setOnClickListener {
-            navController.navigate(R.id.action_resultFragment_to_menuFragment)
+            val intent = Intent(context, MainActivity::class.java)
+            activity!!.finish()
+            startActivity(intent)
         }
     }
 

@@ -39,17 +39,20 @@ class OsmFragment : Fragment() {
     fun displayCurrents() {
         viewModel.getSettings(object : SettingsCallback {
             override fun onCurrentSit(result: Int) {
+                heart_rate_sit_image.visibility = View.GONE
                 heart_rate_sit_text.text = result.toString()
                 text_append_sit.visibility = View.VISIBLE
                 heart_rate_sit.isClickable = false
             }
 
             override fun onCurrentStand(result: Int) {
+                heart_rate_stand_image.visibility = View.GONE
                 heart_rate_stand_text.text = result.toString()
                 text_append_stand.visibility = View.VISIBLE
                 heart_rate_stand.isClickable = false
                 heart_rate_sit.isClickable = false
                 viewModel.cleanSettings()
+                parent_layout.isClickable = true
                 parent_layout.setOnClickListener {
                     var bundle = Bundle()
                     var point = viewModel.getOsmPoints(heart_rate_sit_text.text.toString().toInt(), heart_rate_stand_text.text.toString().toInt())

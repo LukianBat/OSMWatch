@@ -32,9 +32,9 @@ class OsmFragmentViewModel : ViewModel() {
         if (point >= 5 && point < 7.5)
             n = "II"
         if (point >= 2.5 && point < 5)
-            n = "IV"
+            n = "III"
         if (point < 2.5)
-            n = "V"
+            n = "IV"
         return n
     }
     fun getOsmPoints(sitCurrent : Int, standCurrent : Int): Float{

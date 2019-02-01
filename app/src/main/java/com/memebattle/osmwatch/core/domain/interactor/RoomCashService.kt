@@ -9,6 +9,7 @@ import io.reactivex.SingleObserver
 import io.reactivex.SingleOnSubscribe
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
+import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 
 class RoomCashService(val dao: CashDao) {
@@ -33,12 +34,16 @@ class RoomCashService(val dao: CashDao) {
                     }
                 })
     }
-    @SuppressLint("CheckResult")
     fun getAllCurrents(baseCallback: BaseCallback<List<CashEntity>>){
-        dao.getAll()
+        dao.getAll().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe {
-                    baseCallback.onSuccess(it)
-                }
+                .subscribe(object : DisposableSingleObserver<List<CashEntity>>() {
+                    override fun onError(e: Throwable) {
+                        baseCallback.onError(e)
+                    }
+                    override fun onSuccess(t: List<CashEntity>) {
+                        baseCallback.onSuccess(t)
+                    }
+                })
     }
 }

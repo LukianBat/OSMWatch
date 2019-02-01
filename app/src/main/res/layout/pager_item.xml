@@ -23,12 +23,12 @@
             android:layout_marginBottom="8dp"
             android:text="0"
             android:textColor="@color/colorWhite"
-            android:textSize="132sp"
+            android:textSize="188sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.382" />
+            app:layout_constraintVertical_bias="0.29000002" />
 
         <TextView
             android:id="@+id/point_display_item"
@@ -37,14 +37,13 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="124dp"
+            android:layout_marginBottom="8dp"
             android:text="000"
             android:textColor="@color/colorWhite"
-            android:textSize="76sp"
+            android:textSize="96sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/current"
-            app:layout_constraintVertical_bias="0.395" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@+id/zone_display_item"
+            app:layout_constraintVertical_bias="0.208" />    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

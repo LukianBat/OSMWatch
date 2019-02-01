@@ -14,19 +14,18 @@
 
         <ImageView
             android:id="@+id/imageHeart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="108dp"
+            android:layout_height="102dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:src="@drawable/ic_favorite_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintEnd_toStartOf="@+id/current"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.509" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/current"
@@ -38,16 +37,16 @@
             android:layout_marginBottom="8dp"
             android:text="0"
             android:textColor="@color/colorWhite"
-            android:textSize="96sp"
+            android:textSize="172sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageHeart"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.501" />
 
         <TextView
             android:id="@+id/text_append_sit"
-            android:layout_width="69dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -55,7 +54,7 @@
             android:layout_marginBottom="8dp"
             android:text="уд.\nмин"
             android:textColor="@color/colorWhite"
-            android:textSize="36sp"
+            android:textSize="42sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
