@@ -39,9 +39,13 @@ class HeartRateViewModel : ViewModel() {
         val timer = Timer()
         timer.schedule(object : TimerTask() {
             override fun run() {
-                heartRateService.stopService()
-                settingsService.setCurrent(lastCurrent)
-                callback.onResult()
+                if (lastCurrent != 0) {
+                    heartRateService.stopService()
+                    settingsService.setCurrent(lastCurrent)
+                    callback.onResult()
+                } else {
+                    setCurrent(callback)
+                }
             }
         }, 10000)
     }
