@@ -1,14 +1,14 @@
 # OSM Watch
-Rebirth OSM for android smartwatch with simple and progressive disign.
+Приложение для смарт-часов на Андроид, для контроля функционального состояния организма. Мониторинг осуществляется путем измерения пульса через датчик сердцебиения часов. 
 # Clean Architecture
-I try to use clean Architecture
+Попытка использования чистой архитектуры
 # Room
-Using Room database for data cash
+Использование orm Room для хранения данных о последних измерениях
 # MVVM
 Google Jetpack
 # Dependency Injection
 Dagger 2
 # RxKotlin
-Using rx for work with not UI thread
+Использование реактивности для многопоточности, при запросе к БД
 # Navigation
-Navigation Architecture Component
+Навигационные графы приложения Navigation Architecture Component
